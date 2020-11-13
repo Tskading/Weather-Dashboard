@@ -26,20 +26,22 @@ $("#search").on("click", function(event){
         method: "GET"
     }).then(function(response){
         console.log(response);
-        console.log(response.main.temp);
+        console.log("temp" + response.main.temp);
+        console.log("humidity" + response.main.humidity);
+        console.log("wind speed" + response.wind.speed);
 
         $("#cityDateEl").text(response.name);
 
-        $("#tempEl").text(response.main.temp);
+        $("#tempEl").text("Temperature: " + response.main.temp);
+        console.log(response.main.temp - 273.15) * 1.80 + 32;
 
-        $("#humidityEl").text(response.main.humidity);
+        $("#humidityEl").text("Humidity: " + response.main.humidity);
 
+        $("#windSpeedEl").text("Wind Speed: " + response.wind.speed);
 
+        // line for uv index data 
 
     })
-
-
-
   
 });
 
