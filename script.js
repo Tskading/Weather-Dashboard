@@ -66,7 +66,7 @@ $("#search").on("click", function(event){
 
                         if ( forecastTime === "12:00:00") {
                             $("#day" + forecastPlusOne).children(".cardDate").text(forecastDate);
-                            // weather image sprite
+                            $("#weatherImage" + forecastPlusOne).attr("src", "http://openweathermap.org/img/w/" + e.list[i].weather[0].icon + ".png");
                             $("#day" + forecastPlusOne).children(".cardTemp").text("Temperature: " + e.list[i].main.temp + " °F");
                             $("#day" + forecastPlusOne).children(".cardHumidity").text("Humidity: " + e.list[i].main.humidity + " %");
                             $("#day" + forecastPlusOne).children(".cardWindSpeed").text("Wind Speed: " + e.list[i].wind.speed + " mph");
