@@ -20,7 +20,7 @@ $("#search").on("click", function(event){
     // console.log("queryURL:", queryURL);
 
 // making a new list button with cities searched    
-    $("#listCities").text(citySaved);
+    // $("#listCities").text(citySaved);
 
 // ajax call and filling in main card with response data
     $.ajax({
