@@ -34,13 +34,15 @@ $("#search").on("click", function(event){
 
         $("#cityDateEl").text(response.name);
 
+        $("#weatherSprite").attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
+
         $("#tempEl").text("Temperature: " + response.main.temp + " °F");
         
         $("#humidityEl").text("Humidity: " + response.main.humidity + "%");
 
         $("#windSpeedEl").text("Wind Speed: " + response.wind.speed + "mph");
 
-        // line for uv index data 
+        
 
             // ajax call for the forecast data cards
             function displayForecast() {
@@ -80,3 +82,12 @@ $("#search").on("click", function(event){
   
 });
 
+// function cityButtons(){
+//     for ( i = 0; i < cities.length; i++) {
+//       var button = $("<button>"); 
+//       button.addClass("cityButton");
+//       button.attr("data-city", cities[i]);
+//       button.text(cities[i]);
+//       $("#searchedCities").append(button); 
+//     }
+// };
